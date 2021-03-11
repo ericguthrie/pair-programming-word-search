@@ -35,4 +35,27 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+it("should return true if the word is present", function() {
+  const result = wordSearch([
+    ['H', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+    ['E', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+    ['L', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+    ['L', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+    ['O', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+    ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+    ['L', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+    ['U', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+    ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+  ], 'HELLOBLUE')
+
+  assert.isTrue(result);
+});
+
+
+it("should return false if the no array is present", function() {
+  const result = wordSearch([], '')
+
+  assert.isFalse(result);
+});
 });
